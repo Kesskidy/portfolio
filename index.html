@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathéo Mollet - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Mathéo Mollet</div>
+            <ul>
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact" class="btn-cta">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="hero-section">
+        <div class="hero-container">
+            <div class="profile-img-container">
+                <img src="assets/img/profile.jpg" alt="Mathéo Mollet" class="profile-img">
+            </div>
+            <div class="hero-content">
+                <h1>Étudiant MMI Web</h1>
+                <p class="bio">
+                    Passionné par le numérique et la création interactive, je suis étudiant en MMI (Métiers du Multimédia et de l'Internet).
+                    J'aime concevoir des projets alliant design, technologie et narration pour offrir des expériences originales et engageantes.
+                </p>
+                <div class="skills-icons">
+                    <span title="Premiere Pro">Pr</span>
+                    <span title="Illustrator">Ai</span>
+                    <span title="After Effects">Ae</span>
+                    <span title="Photoshop">Ps</span>
+                    <i class="fab fa-html5" title="HTML"></i>
+                    <i class="fab fa-css3-alt" title="CSS"></i>
+                    <i class="fab fa-php" title="PHP"></i>
+                    <i class="fab fa-git-alt" title="Git"></i>
+                    <i class="fab fa-laravel" title="Laravel"></i>
+                </div>
+                <a href="cv_Mathéo_MOLLET.pdf" class="btn-download" download>Télécharger mon CV</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="section-title">
+            <h2>Mes Réalisations</h2>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Tout</button>
+            <button class="filter-btn" data-filter="audiovisuel">Audiovisuel</button>
+            <button class="filter-btn" data-filter="communication">Communication</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+        </div>
+
+        <div class="projects-grid" id="projects-container">
+            </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <h3>Contactez-moi</h3>
+            <div class="contact-infos">
+                <p><i class="fas fa-envelope"></i> matheomollet7@gmail.com</p>
+                <p><i class="fas fa-phone"></i> 06.19.98.95.99</p>
+                <p><i class="fab fa-discord"></i> Discord: Keskidy</p>
+                <p><i class="fab fa-github"></i> GitHub: Keskidy</p>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2026 Mathéo Mollet - Tous droits réservés</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

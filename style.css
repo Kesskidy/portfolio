@@ -1,0 +1,378 @@
+:root {
+    --primary: #E34234;
+    --secondary: #CE3468;
+    --highlight: #F57B89;
+    --light-bg: #FFF9F0;
+    --dark-text: #1F1F1F;
+    --white: #ffffff;
+    --transition: 0.3s;
+    --font-header: 'Source Sans Pro', sans-serif;
+    --font-body: 'Source Sans Pro', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--light-bg);
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: var(--white);
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: var(--primary);
+}
+
+.btn-cta {
+    background-color: var(--primary);
+    color: white !important;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+/* Hero Section (Profil) */
+.hero-section {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--light-bg) 0%, #fff 100%);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1000px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Effet cercle rose autour de la photo (comme le PDF) */
+.profile-img-container {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: var(--secondary); /* Le cercle rose */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.skills-icons {
+    margin: 1.5rem 0;
+    font-size: 1.5rem;
+    color: var(--primary);
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.skills-icons span {
+    font-weight: bold;
+    font-family: sans-serif;
+    border: 2px solid var(--highlight);
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 1rem;
+}
+
+.btn-download {
+    display: inline-block;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-download:hover {
+    background-color: var(--primary);
+}
+
+/* Projects Section */
+.projects-section {
+    padding: 4rem 5%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.section-title h2 {
+    color: var(--dark-text);
+    font-size: 2rem;
+}
+
+/* Filtres */
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: transparent;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background-color: var(--secondary);
+    color: white;
+}
+
+/* Grille de cartes */
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Style Carte Projet (Inspiré des cadres du PDF) */
+.project-card {
+    background: white;
+    border-radius: 20px; /* Coins très arrondis */
+    overflow: hidden;
+    width: 350px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border: 3px solid var(--dark-text); /* Bordure noire épaisse style sticker */
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    height: 200px;
+    overflow: hidden;
+    border-bottom: 3px solid var(--dark-text);
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-category {
+    color: var(--secondary);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--dark-text);
+}
+
+.card-content p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.card-link {
+    margin-top: auto;
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+    align-self: flex-start;
+    padding-bottom: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-text);
+    color: white;
+    padding: 3rem 5%;
+    text-align: center;
+}
+
+.contact-infos {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        text-align: center;
+    }
+    .profile-img-container {
+        width: 200px;
+        height: 200px;
+    }
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+/* --- Styles Page Projet (project.html) --- */
+
+.project-detail-section {
+    padding: 4rem 5%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+
+.project-container {
+    background: white;
+    max-width: 900px;
+    width: 100%;
+    border-radius: 30px; /* Très arrondi comme demandé */
+    padding: 3rem;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+    border: 3px solid var(--dark-text); /* Rappel du style "sticker" */
+}
+
+.detail-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.detail-category {
+    color: var(--secondary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(206, 52, 104, 0.1);
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.detail-header h1 {
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: var(--dark-text);
+}
+
+.detail-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #666;
+    font-weight: 600;
+}
+
+.detail-image {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+    border: 3px solid var(--dark-text);
+}
+
+.detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.detail-content h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.detail-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 2rem;
+    white-space: pre-line; /* Permet de garder les sauts de ligne du JSON */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detail-header h1 { font-size: 2rem; }
+    .project-container { padding: 1.5rem; }
+    .detail-image { height: 250px; }
+}

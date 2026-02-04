@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "title": "Interview",
+        "category": "audiovisuel",
+        "description": "Réalisation d'une interview du directeur du syndicat Apicole pour informer le syndicat",
+        "image": "assets/img/interview.png",
+        "link": "#",
+        "content": "L'interview a été réalisé aux rucher d'étude du Syndicat L'Apiculteur Béthunois, la personne interviewé se nomme Michel Moraviek, il est le directeur de ce syndicat et souhaite faire augmenté sa visibilité pour ainsi avoir plus d'adhérent mais aussi protéger les aveilles. Lors de cette interview j'ai du faire attention au cadre, au son et à la lumière pour que le rendu soit le plus professionnel possible."
+    },
+    {
+        "id": 2,
+        "title": "Booktube",
+        "category": "audiovisuel",
+        "description": "Réalisation d'une vidéo YouTube pour présenter et critiquer un livre. Travail sur le cadre et le son.",
+        "image": "assets/img/miniature.png",
+        "link": "#",
+        "content": "Pour ce projet, nous devions réaliser une vidéo type booktube sur le livre de notre choix, donc nous avions choisis le manga Nana de Ai Yazawa. Le but était de faire une critique constructive du livre en parlant des points positifs et négatifs, mais aussi de donner notre avis personnel. J'ai donc travaillé sur le cadre pour que la vidéo soit agréable à regarder, mais aussi sur le son pour que la qualité soit au rendez-vous."
+    },
+    {
+        "id": 3,
+        "title": "Affiche Prévention",
+        "category": "communication",
+        "description": "Réalisation d'une affiche pour la prévention routière : 'Si vous comptez conduire, ne buvez pas'.",
+        "image": "assets/img/noël.jpg",
+        "link": "#",
+        "content": "Le but de ce projet était de créer une affiche de prévention routière sur le thème 'Si vous comptez conduire, ne buvez pas'. J'ai choisi de faire une ambiance dans le style d'une fête de noël en indiquant que pour soit et les autres, il ne faut pas boire avant de conduire. J'ai utilisé des couleurs sombres pour renforcer le message et attirer l'attention sur le sujet."
+    },
+    {
+        "id": 4,
+        "title": "Affiche Gims",
+        "category": "communication",
+        "description": "Le but dans ce projet était de créer une marque de chewing-gum fictive et ensuite d'imaginer comment associer n'importe quel artiste avec le produit dans une affiche.",
+        "image": "assets/img/affiche_chewing.jpg",
+        "link": "#",
+        "content": "Nous avions dû créer une marque de chewing-gum fictive et ensuite imaginer comment associer n'importe quel artiste avec le produit dans une affiche. J'ai choisi l'artiste Gims pour son image forte et son influence dans le monde de la musique. J'ai utilisé des couleurs vives et un design accrocheur pour attirer l'attention sur l'affiche et promouvoir le produit avec une acroche qui fait penser à sa musique Caméléon."
+    },
+    {
+        "id": 6,
+        "title": "Site Pour Album Photo",
+        "category": "web",
+        "description": "Conception et développement d'un site web pour un album photo.",
+        "image": "assets/img/albumphoto.png",
+        "link": "#",
+        "content": "Pour ce projet, j'ai conçu et développé un site web dédié à la présentation d'un album photo. Le site permet aux utilisateurs de naviguer facilement à travers les différentes photos, avec une mise en page moderne. J'ai utilisé le framework Laravel pour structurer le projet et améliorer la performance du site."
+    },
+    {
+        "id": 7,
+        "title": "SAE Web",
+        "category": "web",
+        "description": "Création d'un site web pour les fans d'un style de musique.",
+        "image": "assets/img/saeweb.png",
+        "link": "#",
+        "content": "Cette SAE consistait à créer un blog/site pour les fans d'un style de musique imposé par la consigne, nous avions choisi le style Soul pour son aspect graphique qui nous a permis de réaliser un site agréable pour les utilisateur, cette SAE était une SAE qui mélanger des but mmi à des but info et avec le framework Laravel, cela nous avez permis de mieux comprendre la différence de programmation entre les deux domaines."
+    }
+]

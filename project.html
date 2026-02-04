@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détail du Projet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">Mathéo Mollet</a></div>
+            <ul>
+                <li><a href="index.html">Retour accueil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="project-detail-section">
+        <div class="project-container" id="project-detail">
+            <p>Chargement du projet...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mathéo Mollet - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Récupérer l'ID dans l'URL (ex: ?id=1)
+            const params = new URLSearchParams(window.location.search);
+            const projectId = parseInt(params.get('id'));
+
+            const container = document.getElementById('project-detail');
+
+            // 2. Charger les données
+            fetch('data.json')
+                .then(res => res.json())
+                .then(data => {
+                    // 3. Trouver le bon projet
+                    const project = data.find(p => p.id === projectId);
+
+                    if (project) {
+                        // 4. Afficher le HTML
+                        container.innerHTML = `
+                            <div class="detail-header">
+                                <span class="detail-category">${project.category}</span>
+                                <h1>${project.title}</h1>
+                            </div>
+
+                            <div class="detail-image">
+                                <img src="${project.image}" alt="${project.title}">
+                            </div>
+
+                            <div class="detail-content">
+                                <h2>À propos du projet</h2>
+                                <p>${project.content}</p> 
+                            </div>
+                        `;
+                    } else {
+                        container.innerHTML = "<p>Projet introuvable.</p>";
+                    }
+                })
+                .catch(err => console.error(err));
+        });
+    </script>
+</body>
+</html>
