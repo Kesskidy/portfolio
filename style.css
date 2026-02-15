@@ -296,6 +296,8 @@ footer {
 
 /* --- Styles Page Projet (project.html) --- */
 
+/* --- Styles Page Projet (project.html) --- */
+
 .project-detail-section {
     padding: 4rem 5%;
     min-height: 80vh;
@@ -307,10 +309,10 @@ footer {
     background: white;
     max-width: 900px;
     width: 100%;
-    border-radius: 30px; /* Très arrondi comme demandé */
+    border-radius: 30px;
     padding: 3rem;
     box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-    border: 3px solid var(--dark-text); /* Rappel du style "sticker" */
+    border: 3px solid var(--dark-text);
 }
 
 .detail-header {
@@ -334,28 +336,28 @@ footer {
     color: var(--dark-text);
 }
 
-.detail-meta {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    color: #666;
-    font-weight: 600;
-}
-
+/* --- MODIFICATIONS ICI POUR LES AFFICHES --- */
 .detail-image {
     width: 100%;
-    height: 400px;
+    height: auto; /* Supprime la hauteur fixe de 400px */
+    max-height: 800px; /* Optionnel : limite la hauteur pour ne pas trop scroller */
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 3rem;
     border: 3px solid var(--dark-text);
+    display: flex;
+    justify-content: center; /* Centre l'image si elle n'est pas assez large */
+    background-color: #f9f9f9; /* Fond léger au cas où l'image est étroite */
 }
 
 .detail-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: auto; /* Laisse l'image prendre sa largeur naturelle */
+    max-width: 100%; /* Mais ne dépasse pas le conteneur */
+    height: auto; /* Garde les proportions */
+    display: block;
+    object-fit: contain; /* S'assure que toute l'image est visible */
 }
+/* ------------------------------------------- */
 
 .detail-content h2 {
     color: var(--primary);
@@ -368,7 +370,14 @@ footer {
     line-height: 1.8;
     color: #444;
     margin-bottom: 2rem;
-    white-space: pre-line; /* Permet de garder les sauts de ligne du JSON */
+    white-space: pre-line;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .detail-header h1 { font-size: 2rem; }
+    .project-container { padding: 1.5rem; }
+    .detail-image { max-height: 500px; } /* Plus petit sur mobile */
 }
 
 /* Responsive */
