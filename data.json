@@ -52,5 +52,23 @@
         "image": "assets/img/saeweb.png",
         "link": "#",
         "content": "Cette SAE consistait à créer un blog/site pour les fans d'un style de musique imposé par la consigne, nous avions choisi le style Soul pour son aspect graphique qui nous a permis de réaliser un site agréable pour les utilisateur, cette SAE était une SAE qui mélanger des but mmi à des but info et avec le framework Laravel, cela nous avez permis de mieux comprendre la différence de programmation entre les deux domaines."
+    },
+    {
+        "id": 8,
+        "title": "Site GOTY de chaque année",
+        "category": "web",
+        "description": "Création d'un site web pour présenter les jeux vidéo Game of the Year de chaque année, pour répertorié tout les jeux qui sont devenu des goty depuis le premier vrai goty enregistré.",
+        "image": "assets/img/goty.png",
+        "link": "#",
+        "content": "Ce projet consistait à créer un site web pour présenter les jeux vidéo Game of the Year de chaque année. Le site permet de répertorier tous les jeux qui ont été élus comme Game of the Year, depuis le premier vrai goty enregistré. J'ai utilisé le framework Laravel pour structurer le projet et améliorer la performance du site."
+    },
+    {
+        "id": 9,
+        "title": "Site Bonsaï Coach Académie",
+        "category": "web",
+        "description": "Conception et développement d'un site pour l'association Bonsaï La Part Du Colibri, qui propose des cours de bonsaï et des conseils pour les passionnés de cette pratique.",
+        "image": "assets/img/bonsaicoach.png",
+        "link": "#",
+        "content": "Pour ce projet, j'ai conçu et développé un site web pour l'association Bonsaï La Part Du Colibri. Le site propose des conseilles et des défis pour les passionnés de bonsaï, les défis rapporte des point et don permet un système de Rang, avec un certains rang les utilisateurs peuvent avoir une importance dans le site et peuvent contribué en proposant des nouvelles astuces. J'ai utilisé le CMS WordPress avec les thèmes Divi et créer moi-même des plugins pour gamifié le site et améliorer l'expérience utilisateur."
     }
 ]
