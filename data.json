@@ -59,8 +59,8 @@
         "category": "web",
         "description": "Création d'un site web pour présenter les jeux vidéo Game of the Year de chaque année et répertorier tous les jeux qui sont devenus des GOTY depuis le premier véritable GOTY enregistré.",
         "image": "assets/img/goty.png",
-        "link": "#",
-        "content": "Ce projet consistait à créer un site web pour présenter les jeux vidéo Game of the Year de chaque année. Le site permet de répertorier tous les jeux qui ont été élus comme Game of the Year, depuis le premier véritable GOTY enregistré. J'ai utilisé le framework Laravel pour structurer le projet et améliorer les performances du site. Les technologies utilisées pour ce projet sont HTML, CSS, JavaScript et GSAP pour ses animations."
+        "link": "https://kesskidy.github.io/goty_site/",
+        "content": "Ce projet consistait à créer un site web pour présenter les jeux vidéo Game of the Year de chaque année. Le site permet de répertorier tous les jeux qui ont été élus comme Game of the Year, depuis le premier véritable GOTY enregistré. J'ai utilisé le framework Laravel pour structurer le projet et améliorer les performances du site. Les technologies utilisées pour ce projet sont HTML, CSS, JavaScript et GSAP pour ses animations. Lien"
     },
     {
         "id": 9,
@@ -68,7 +68,7 @@
         "category": "web",
         "description": "Conception et développement d'un site pour l'association Bonsaï La Part Du Colibri, qui propose des cours de bonsaï et des conseils pour les passionnés de cette pratique.",
         "image": "assets/img/bonsaicoach.png",
-        "link": "#",
+        "link": "https://bcakdmi.fr",
         "content": "Pour ce projet, j'ai conçu et développé un site web pour l'association Bonsaï La Part du Colibri. Le site propose des conseils et des défis pour les passionnés de bonsaï. Les défis rapportent des points et permettent donc un système de classement. Avec un certain rang, les utilisateurs peuvent avoir une importance dans le site et contribuer en proposant de nouvelles astuces. J'ai utilisé le CMS WordPress avec le thème Divi et créé moi-même des plugins pour gamifier le site et améliorer l'expérience utilisateur."
     }
 ]

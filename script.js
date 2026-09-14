@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${project.title}</h3>
                     <p>${project.description}</p>
                     <a href="project.html?id=${project.id}" class="card-link">En savoir plus</a>
+                    ${project.link && project.link !== '#' ? `<a href="${project.link}" class="card-link" target="_blank" rel="noopener noreferrer">Voir le site</a>` : ''}
                 </div>
             `;
 

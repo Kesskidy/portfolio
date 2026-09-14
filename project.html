@@ -59,6 +59,7 @@
                             <div class="detail-content">
                                 <h2>À propos du projet</h2>
                                 <p>${project.content}</p> 
+                                ${project.link && project.link !== '#' ? `<a href="${project.link}" class="card-link" target="_blank" rel="noopener noreferrer">Voir le site</a>` : ''}
                             </div>
                         `;
                     } else {
