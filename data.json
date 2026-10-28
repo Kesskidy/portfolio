@@ -1,74 +1,135 @@
 [
     {
-        "id": 1,
-        "title": "Interview",
-        "category": "audiovisuel",
-        "description": "Réalisation d'une interview du directeur du syndicat apicole pour informer le syndicat",
-        "image": "assets/img/interview.png",
-        "link": "#",
-        "content": "L'interview a été réalisée dans le rucher d'étude du syndicat L'Apiculteur Béthunois. La personne interviewée se nomme Michel Moraviek ; il est le directeur de ce syndicat et souhaite faire augmenter sa visibilité afin d'avoir plus d'adhérents, mais aussi de protéger les abeilles. Lors de cette interview, j'ai dû faire attention au cadre, au son et à la lumière pour que le rendu soit le plus professionnel possible."
-    },
-    {
-        "id": 2,
-        "title": "Booktube",
-        "category": "audiovisuel",
-        "description": "Réalisation d'une vidéo YouTube pour présenter et critiquer un livre. Travail sur le cadre et le son.",
-        "image": "assets/img/miniature.png",
-        "link": "#",
-        "content": "Pour ce projet, nous devions réaliser une vidéo de type booktube sur le livre de notre choix ; nous avions donc choisi le manga Nana d'Ai Yazawa. Le but était de faire une critique constructive du livre en parlant des points positifs et négatifs, mais aussi de donner notre avis personnel. J'ai donc travaillé sur le cadre pour que la vidéo soit agréable à regarder, mais aussi sur le son pour que la qualité soit au rendez-vous."
-    },
-    {
-        "id": 3,
-        "title": "Affiche Prévention",
-        "category": "communication",
-        "description": "Réalisation d'une affiche pour la prévention routière : 'Si vous comptez conduire, ne buvez pas'.",
-        "image": "assets/img/noël.jpg",
-        "link": "#",
-        "content": "Le but de ce projet était de créer une affiche de prévention routière sur le thème « Si vous comptez conduire, ne buvez pas ». J'ai choisi de créer une ambiance dans le style d'une fête de Noël en indiquant que, pour soi et pour les autres, il ne faut pas boire avant de conduire. J'ai utilisé des couleurs sombres pour renforcer le message et attirer l'attention sur le sujet."
-    },
-    {
-        "id": 4,
-        "title": "Affiche Gims",
-        "category": "communication",
-        "description": "Le but de ce projet était de créer une marque de chewing-gum fictive, puis d'imaginer comment associer n'importe quel artiste au produit dans une affiche.",
-        "image": "assets/img/affiche_chewing.jpg",
-        "link": "#",
-        "content": "Nous devions créer une marque de chewing-gum fictive, puis imaginer comment associer n'importe quel artiste au produit dans une affiche. J'ai choisi l'artiste Gims pour son image forte et son influence dans le monde de la musique. J'ai utilisé des couleurs vives et un design accrocheur pour attirer l'attention sur l'affiche et promouvoir le produit avec une accroche qui fait penser à sa musique Caméléon."
-    },
-    {
-        "id": 6,
-        "title": "Site pour album photo",
+        "id": 9,
+        "title": "Bonsaï Coach Académie",
+        "featured": true,
         "category": "web",
-        "description": "Conception et développement d'un site web pour un album photo.",
-        "image": "assets/img/albumphoto.png",
-        "link": "#",
-        "content": "Pour ce projet, j'ai conçu et développé un site web dédié à la présentation d'un album photo. Le site permet aux utilisateurs de naviguer facilement à travers les différentes photos, avec une mise en page moderne. J'ai utilisé le framework Laravel pour structurer le projet et améliorer la performance du site."
-    },
-    {
-        "id": 7,
-        "title": "SAE Web",
-        "category": "web",
-        "description": "Création d'un site web pour les fans d'un style de musique.",
-        "image": "assets/img/saeweb.png",
-        "link": "#",
-        "content": "Cette SAE consistait à créer un blog ou un site pour les fans d'un style de musique imposé par la consigne. Nous avions choisi le style soul pour son aspect graphique, ce qui nous a permis de réaliser un site agréable pour les utilisateurs. Cette SAE mélangeait des notions de MMI et d'informatique et, avec le framework Laravel, nous a permis de mieux comprendre les différences de programmation entre les deux domaines."
+        "description": "Plateforme d'apprentissage gamifiée pour l'association Bonsaï La Part du Colibri : défis, points, rangs et votes pondérés, via deux plugins WordPress codés sur mesure.",
+        "image": "assets/img/bonsaicoach.webp",
+        "context": "Stage de 9 semaines",
+        "team": "Seul en développement, en lien avec mes tuteurs de stage",
+        "tools": ["WordPress", "Divi", "PHP", "AJAX", "ACF"],
+        "content": "J'ai conçu et développé le site de l'association Bonsaï La Part du Colibri, qui accompagne des passionnés de bonsaï dans leur apprentissage. Le site est construit sous WordPress avec le thème Divi, mais toute la logique de progression repose sur deux extensions que j'ai développées moi-même en PHP.",
+        "highlights": [
+            "Système de défis : l'élève soumet un défi, un coach le valide ou le refuse, et les points sont crédités sur son cycle d'apprentissage (et sur les cycles liés).",
+            "Progression par rangs (apprenti, compagnon, expert, passeur) avec promotion automatique, et rétrogradation après 3 refus, propagée en cascade aux cycles dépendants avec une protection contre les boucles infinies.",
+            "Vote AJAX pondéré sur les publications des membres : le poids du vote dépend du rôle (guide, passeur, coach), un coach ne peut évaluer que ses propres élèves, et chaque membre ne vote qu'une fois.",
+            "Sécurité côté serveur : nonces WordPress, vérification des rangs et des droits en PHP pour empêcher les contournements depuis le navigateur.",
+            "Intégration à Divi via les filtres WordPress (the_content, the_excerpt), sans modifier les templates du thème."
+        ],
+        "challenge": "La communication avec mes tuteurs.",
+        "status": "La V1 est fonctionnelle et en ligne ; la V3 n'a pas pu être terminée à 100 % pendant le stage.",
+        "link": "https://bcakdmi.fr",
+        "repo": "https://github.com/Kesskidy/BCA"
     },
     {
         "id": 8,
-        "title": "Site GOTY de chaque année",
+        "title": "Site GOTY",
         "category": "web",
-        "description": "Création d'un site web pour présenter les jeux vidéo Game of the Year de chaque année et répertorier tous les jeux qui sont devenus des GOTY depuis le premier véritable GOTY enregistré.",
-        "image": "assets/img/goty.png",
+        "description": "Site animé qui répertorie tous les jeux élus Game of the Year depuis le premier GOTY enregistré.",
+        "image": "assets/img/goty.webp",
+        "context": "Projet scolaire, BUT MMI",
+        "team": "En duo — j'ai réalisé toutes les animations GSAP du site",
+        "tools": ["HTML", "SCSS", "JavaScript", "GSAP"],
+        "content": "Ce projet avait pour but d'apprendre à utiliser GSAP et SCSS. Nous avons créé un site qui présente, année par année, les jeux vidéo élus Game of the Year depuis le premier GOTY enregistré. Je me suis chargé de toute la partie animation du site avec GSAP.",
         "link": "https://kesskidy.github.io/goty_site/",
-        "content": "Ce projet consistait à créer un site web pour présenter les jeux vidéo Game of the Year de chaque année. Le site permet de répertorier tous les jeux qui ont été élus comme Game of the Year, depuis le premier véritable GOTY enregistré. J'ai utilisé le framework Laravel pour structurer le projet et améliorer les performances du site. Les technologies utilisées pour ce projet sont HTML, CSS, JavaScript et GSAP pour ses animations. Lien"
+        "repo": "https://github.com/Kesskidy/goty_site"
     },
     {
-        "id": 9,
-        "title": "Site Bonsaï Coach Académie",
+        "id": 6,
+        "title": "Album photo",
         "category": "web",
-        "description": "Conception et développement d'un site pour l'association Bonsaï La Part Du Colibri, qui propose des cours de bonsaï et des conseils pour les passionnés de cette pratique.",
-        "image": "assets/img/bonsaicoach.png",
-        "link": "https://bcakdmi.fr",
-        "content": "Pour ce projet, j'ai conçu et développé un site web pour l'association Bonsaï La Part du Colibri. Le site propose des conseils et des défis pour les passionnés de bonsaï. Les défis rapportent des points et permettent donc un système de classement. Avec un certain rang, les utilisateurs peuvent avoir une importance dans le site et contribuer en proposant de nouvelles astuces. J'ai utilisé le CMS WordPress avec le thème Divi et créé moi-même des plugins pour gamifier le site et améliorer l'expérience utilisateur."
+        "description": "Application Laravel de gestion d'albums photo : connexion, création d'albums, upload de photos et tri par tags.",
+        "image": "assets/img/albumphoto.webp",
+        "context": "Projet scolaire, BUT MMI",
+        "team": "Équipe de 3",
+        "tools": ["Laravel", "PHP", "Git"],
+        "content": "Nous avons développé une application web qui permet à un utilisateur de se connecter, de créer ses albums, d'y téléverser des photos et de les retrouver grâce à un système de tags.",
+        "challenge": "Un gros conflit CSS est apparu après qu'un membre de l'équipe a travaillé et poussé directement sur la branche main.",
+        "repo": "https://github.com/NathOof30/AlbumPhoto"
+    },
+    {
+        "id": 7,
+        "title": "SAE Web — site soul",
+        "category": "web",
+        "description": "Site pour les fans de musique soul, réalisé avec une équipe mixte MMI / BUT Informatique.",
+        "image": "assets/img/saeweb.webp",
+        "context": "SAE, BUT MMI",
+        "team": "Équipe de 8 : 3 MMI parcours web, 2 MMI parcours communication / création numérique, 3 BUT Informatique",
+        "tools": ["Laravel", "PHP"],
+        "content": "Cette SAE consistait à créer un site pour les fans d'un style de musique. Nous avons choisi la soul pour son univers graphique. Le projet mélangeait les compétences de MMI et d'informatique et nous a fait travailler avec Laravel au sein d'une grande équipe pluridisciplinaire.",
+        "challenge": "Travailler avec une formation qui n'a pas les mêmes méthodes de travail que nous, et trouver une organisation commune."
+    },
+    {
+        "id": 4,
+        "title": "Affiche Chew Me × Gims",
+        "category": "communication",
+        "description": "Création d'une marque de chewing-gum fictive, Chew Me, et d'une affiche publicitaire associant l'artiste Gims au produit.",
+        "image": "assets/img/affiche_chewing.webp",
+        "context": "Projet scolaire, BUT MMI",
+        "team": "Commencé en équipe de 3, terminé seul",
+        "content": "Il fallait créer une marque de chewing-gum fictive puis imaginer comment associer un artiste au produit dans une affiche. J'ai créé la marque Chew Me et choisi Gims pour son image forte. Les couleurs vives et l'accroche, qui fait référence à son titre « Caméléon », servent à attirer l'œil et à rendre le produit mémorable.",
+        "challenge": "Se mettre d'accord sur une direction artistique qui plaise à tout le monde."
+    },
+    {
+        "id": 3,
+        "title": "Affiche prévention routière",
+        "category": "communication",
+        "description": "Affiche de prévention « Si vous comptez conduire, ne buvez pas », dans une ambiance de fête de Noël.",
+        "image": "assets/img/prevention_noel.webp",
+        "context": "Projet scolaire, 1re année de BUT MMI",
+        "team": "Seul",
+        "tools": ["Illustrator"],
+        "content": "Le but était de créer une affiche de prévention routière sur le thème « Si vous comptez conduire, ne buvez pas ». J'ai choisi l'ambiance d'une fête de Noël, période où les repas arrosés sont fréquents, et des couleurs sombres pour renforcer la gravité du message."
+    },
+    {
+        "id": 1,
+        "title": "Interview d'un apiculteur",
+        "category": "audiovisuel",
+        "description": "Interview du directeur du syndicat L'Apiculteur Béthunois pour donner de la visibilité au syndicat.",
+        "image": "assets/img/interview.webp",
+        "context": "Projet scolaire, 2e année de BUT MMI",
+        "team": "Seul en charge de toute la partie multimédia : prise de son, cadrage, montage et motion design",
+        "tools": ["Premiere Pro", "After Effects", "Audition"],
+        "content": "L'interview a été tournée dans le rucher d'étude du syndicat L'Apiculteur Béthunois. Son directeur souhaitait gagner en visibilité pour attirer de nouveaux adhérents et sensibiliser à la protection des abeilles. J'ai géré seul le cadre, le son, la lumière, le montage et les animations.",
+        "challenge": "Gérer toutes les étapes d'une production vidéo seul, et corriger en post-production un son de mauvaise qualité pour obtenir un rendu professionnel.",
+        "note": "La vidéo n'est pas diffusée en ligne : je n'ai pas l'autorisation des personnes filmées."
+    },
+    {
+        "id": 2,
+        "title": "Booktube — Nana",
+        "category": "audiovisuel",
+        "description": "Vidéo de critique du manga Nana d'Ai Yazawa, sous l'angle de la société qu'il dépeint.",
+        "image": "assets/img/miniature.webp",
+        "context": "Projet scolaire, 1re année de BUT MMI",
+        "tools": ["CapCut"],
+        "content": "Nous devions réaliser une vidéo de type booktube sur le livre de notre choix. Nous avons choisi le manga Nana d'Ai Yazawa et proposé une critique de l'œuvre sous l'angle de la société qu'elle met en scène, avec ses points forts, ses limites et notre avis personnel. J'ai travaillé sur le cadre et la qualité du son.",
+        "note": "La vidéo n'est pas diffusée en ligne : je n'ai pas l'accord des personnes filmées."
+    },
+    {
+        "id": 8,
+        "title": "Site TODO",
+        "category": "web",
+        "description": "Site animé qui répertorie tous les jeux élus Game of the Year depuis le premier GOTY enregistré.",
+        "image": "assets/img/goty.webp",
+        "context": "Projet scolaire, BUT MMI",
+        "team": "En duo — j'ai réalisé toutes les animations GSAP du site",
+        "tools": ["HTML", "SCSS", "JavaScript", "GSAP"],
+        "content": "Ce projet avait pour but d'apprendre à utiliser GSAP et SCSS. Nous avons créé un site qui présente, année par année, les jeux vidéo élus Game of the Year depuis le premier GOTY enregistré. Je me suis chargé de toute la partie animation du site avec GSAP.",
+        "link": "https://kesskidy.github.io/todo/",
+        "repo": "https://github.com/Kesskidy/todo/"
+    },
+    {
+        "id": 8,
+        "title": "Site GOTY",
+        "category": "web",
+        "description": "Site animé qui répertorie tous les jeux élus Game of the Year depuis le premier GOTY enregistré.",
+        "image": "assets/img/goty.webp",
+        "context": "Projet scolaire, BUT MMI",
+        "team": "En duo — j'ai réalisé toutes les animations GSAP du site",
+        "tools": ["HTML", "SCSS", "JavaScript", "GSAP"],
+        "content": "Ce projet avait pour but d'apprendre à utiliser GSAP et SCSS. Nous avons créé un site qui présente, année par année, les jeux vidéo élus Game of the Year depuis le premier GOTY enregistré. Je me suis chargé de toute la partie animation du site avec GSAP.",
+        "link": "https://kesskidy.github.io/goty_site/",
+        "repo": "https://github.com/Kesskidy/goty_site"
     }
 ]

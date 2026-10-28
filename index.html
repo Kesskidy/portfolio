@@ -3,11 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mathéo Mollet - Portfolio</title>
+    <title>Mathéo Mollet - Développeur web</title>
+    <meta name="description" content="Portfolio de Mathéo Mollet, développeur web en 3e année de BUT MMI à la recherche d'une alternance : Laravel, PHP, JavaScript, WordPress.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mathéo Mollet - Développeur web">
+    <meta property="og:description" content="Développeur web en 3e année de BUT MMI, à la recherche d'une alternance.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -24,28 +29,55 @@
     </header>
 
     <section id="about" class="hero-section">
+        <div class="hero-3d" id="hero-3d" aria-hidden="true"></div>
         <div class="hero-container">
             <div class="profile-img-container">
-                <img src="assets/img/profile.jpg" alt="Mathéo Mollet" class="profile-img">
+                <img src="assets/img/profile.webp" alt="Photo de Mathéo Mollet" class="profile-img" width="230" height="230">
             </div>
             <div class="hero-content">
-                <h1>Étudiant MMI Web</h1>
+                <p class="hero-badge">À la recherche d'une alternance</p>
+                <h1>Mathéo Mollet</h1>
+                <p class="hero-subtitle">Développeur web — BUT MMI, 3e année parcours développement web</p>
                 <p class="bio">
-                    Passionné par le numérique et la création interactive, je suis étudiant en MMI (Métiers du Multimédia et de l'Internet).
-                    J'aime concevoir des projets alliant design, technologie et narration pour offrir des expériences originales et engageantes.
+                    Je conçois des sites et des applications web, du back-end en PHP / Laravel jusqu'aux animations en JavaScript.
+                    Avant MMI, j'ai obtenu un bac STI2D spécialité ITEC, qui m'a donné des bases en conception avec SolidWorks.
+                    En dehors du code, je suis passionné de jeux vidéo et de modélisation 3D sur Blender.
                 </p>
-                <div class="skills-icons">
-                    <span title="Premiere Pro">Pr</span>
-                    <span title="Illustrator">Ai</span>
-                    <span title="After Effects">Ae</span>
-                    <span title="Photoshop">Ps</span>
-                    <i class="fab fa-html5" title="HTML"></i>
-                    <i class="fab fa-css3-alt" title="CSS"></i>
-                    <i class="fab fa-php" title="PHP"></i>
-                    <i class="fab fa-git-alt" title="Git"></i>
-                    <i class="fab fa-laravel" title="Laravel"></i>
+
+                <div class="skills">
+                    <div class="skills-group">
+                        <h2>Développement</h2>
+                        <ul class="skills-list">
+                            <li>HTML</li>
+                            <li>CSS / SCSS</li>
+                            <li>Tailwind CSS</li>
+                            <li>JavaScript</li>
+                            <li>GSAP</li>
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                            <li>Livewire</li>
+                            <li>WordPress</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="skills-group">
+                        <h2>Design &amp; créa</h2>
+                        <ul class="skills-list">
+                            <li>Figma</li>
+                            <li>Photoshop</li>
+                            <li>Illustrator</li>
+                            <li>Premiere Pro</li>
+                            <li>After Effects</li>
+                            <li>Blender</li>
+                            <li>SolidWorks</li>
+                        </ul>
+                    </div>
                 </div>
-                <a href="cv_Mathéo_MOLLET.pdf" class="btn-download" download>Télécharger mon CV</a>
+
+                <div class="hero-actions">
+                    <a href="cv_Matheo_MOLLET.pdf" class="btn-download" download>Télécharger mon CV</a>
+                    <a href="#contact" class="btn-secondary">Me contacter</a>
+                </div>
             </div>
         </div>
     </section>
@@ -56,28 +88,39 @@
         </div>
 
         <div class="filters">
-            <button class="filter-btn active" data-filter="all">Tout</button>
-            <button class="filter-btn" data-filter="audiovisuel">Audiovisuel</button>
-            <button class="filter-btn" data-filter="communication">Communication</button>
-            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">Tout</button>
+            <button class="filter-btn" data-filter="web" aria-pressed="false">Web</button>
+            <button class="filter-btn" data-filter="communication" aria-pressed="false">Graphisme</button>
+            <button class="filter-btn" data-filter="audiovisuel" aria-pressed="false">Audiovisuel</button>
         </div>
 
-        <div class="projects-grid" id="projects-container">
-            </div>
+        <div class="projects-grid" id="projects-container" aria-live="polite">
+        </div>
     </section>
 
     <footer id="contact">
         <div class="footer-content">
-            <h3>Contactez-moi</h3>
-            <div class="contact-infos">
-                <p><i class="fas fa-envelope"></i> &#x6D;&#x61;&#x74;&#x68;&#x65;&#x6F;&#x6D;&#x6F;&#x6C;&#x6C;&#x65;&#x74;&#x37;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</p>
-                <p><i class="fab fa-discord"></i> Discord: Keskidy</p>
-                <p><i class="fab fa-github"></i> GitHub: Keskidy</p>
-            </div>
+            <h2>Contactez-moi</h2>
+            <p>Je recherche une alternance en développement web : n'hésitez pas à m'écrire.</p>
+            <ul class="contact-infos">
+                <li><a href="&#x6D;&#x61;&#x69;&#x6C;&#x74;&#x6F;&#x3A;&#x6D;&#x61;&#x74;&#x68;&#x65;&#x6F;&#x6D;&#x6F;&#x6C;&#x6C;&#x65;&#x74;&#x37;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;"><i class="fas fa-envelope" aria-hidden="true"></i> &#x6D;&#x61;&#x74;&#x68;&#x65;&#x6F;&#x6D;&#x6F;&#x6C;&#x6C;&#x65;&#x74;&#x37;&#x40;&#x67;&#x6D;&#x61;&#x69;&#x6C;&#x2E;&#x63;&#x6F;&#x6D;</a></li>
+                <li><a href="https://www.linkedin.com/in/math%C3%A9o-mollet-215436385/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Kesskidy" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub : Kesskidy</a></li>
+                <li><span><i class="fab fa-discord" aria-hidden="true"></i> Discord : Keskidy</span></li>
+            </ul>
         </div>
         <p class="footer-bottom">&copy; 2026 Mathéo Mollet - Tous droits réservés</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="head3d.js?v=3"></script>
 </body>
 </html>

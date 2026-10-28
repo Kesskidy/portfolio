@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détail du projet</title>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Projet - Mathéo Mollet</title>
+    <meta name="description" content="Détail d'un projet du portfolio de Mathéo Mollet, développeur web.">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -14,7 +18,8 @@
         <nav>
             <div class="logo"><a href="index.html">Mathéo Mollet</a></div>
             <ul>
-                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="index.html#projects">Tous les projets</a></li>
+                <li><a href="index.html#contact" class="btn-cta">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -26,47 +31,99 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 Mathéo Mollet - Tous droits réservés</p>
+        <p class="footer-bottom">&copy; 2026 Mathéo Mollet - Tous droits réservés</p>
     </footer>
 
     <script>
+        const CATEGORY_LABELS = {
+            web: 'Web',
+            communication: 'Graphisme',
+            audiovisuel: 'Audiovisuel'
+        };
+
         document.addEventListener('DOMContentLoaded', () => {
             // 1. Récupérer l'ID dans l'URL (ex: ?id=1)
             const params = new URLSearchParams(window.location.search);
-            const projectId = parseInt(params.get('id'));
+            const projectId = parseInt(params.get('id'), 10);
 
             const container = document.getElementById('project-detail');
+            const notFound = `
+                <p>Projet introuvable.</p>
+                <a href="index.html#projects" class="card-link">Retour aux projets</a>
+            `;
 
             // 2. Charger les données
-            fetch('data.json')
-                .then(res => res.json())
+            fetch('data.json?v=2')
+                .then(res => {
+                    if (!res.ok) throw new Error(res.status);
+                    return res.json();
+                })
                 .then(data => {
                     // 3. Trouver le bon projet
-                    const project = data.find(p => p.id === projectId);
+                    const index = data.findIndex(p => p.id === projectId);
 
-                    if (project) {
-                        // 4. Afficher le HTML
-                        container.innerHTML = `
-                            <div class="detail-header">
-                                <span class="detail-category">${project.category}</span>
-                                <h1>${project.title}</h1>
-                            </div>
-
-                            <div class="detail-image">
-                                <img src="${project.image}" alt="${project.title}">
-                            </div>
-
-                            <div class="detail-content">
-                                <h2>À propos du projet</h2>
-                                <p>${project.content}</p> 
-                                ${project.link && project.link !== '#' ? `<a href="${project.link}" class="card-link" target="_blank" rel="noopener noreferrer">Voir le site</a>` : ''}
-                            </div>
-                        `;
-                    } else {
-                        container.innerHTML = "<p>Projet introuvable.</p>";
+                    if (index === -1) {
+                        container.innerHTML = notFound;
+                        return;
                     }
+
+                    const project = data[index];
+                    const prev = data[index - 1];
+                    const next = data[index + 1];
+
+                    document.title = `${project.title} - Mathéo Mollet`;
+                    document.querySelector('meta[name="description"]').setAttribute('content', project.description);
+
+                    // 4. Afficher le HTML
+                    container.innerHTML = `
+                        <div class="detail-header">
+                            <span class="detail-category">${CATEGORY_LABELS[project.category] || project.category}</span>
+                            <h1>${project.title}</h1>
+                        </div>
+
+                        <div class="detail-image ${project.category === 'web' ? 'frame-browser' : 'frame-print'}">
+                            <img src="${project.image}" alt="Aperçu du projet ${project.title}">
+                        </div>
+
+                        <dl class="detail-facts">
+                            ${project.context ? `<div><dt>Contexte</dt><dd>${project.context}</dd></div>` : ''}
+                            ${project.team ? `<div><dt>Équipe et rôle</dt><dd>${project.team}</dd></div>` : ''}
+                            ${project.tools ? `<div><dt>Outils</dt><dd><ul class="skills-list">${project.tools.map(t => `<li>${t}</li>`).join('')}</ul></dd></div>` : ''}
+                        </dl>
+
+                        <div class="detail-content">
+                            <h2>À propos du projet</h2>
+                            <p>${project.content}</p>
+
+                            ${project.highlights ? `
+                                <h2>Ce que j'ai développé</h2>
+                                <ul class="detail-highlights">${project.highlights.map(h => `<li>${h}</li>`).join('')}</ul>
+                            ` : ''}
+
+                            ${project.challenge ? `
+                                <h2>Difficulté rencontrée</h2>
+                                <p>${project.challenge}</p>
+                            ` : ''}
+
+                            ${project.status ? `<p class="detail-note"><i class="fas fa-circle-info" aria-hidden="true"></i> ${project.status}</p>` : ''}
+                            ${project.note ? `<p class="detail-note"><i class="fas fa-lock" aria-hidden="true"></i> ${project.note}</p>` : ''}
+
+                            <div class="card-links">
+                                ${project.link ? `<a href="${project.link}" class="card-link" target="_blank" rel="noopener noreferrer">Voir le site</a>` : ''}
+                                ${project.repo ? `<a href="${project.repo}" class="card-link" target="_blank" rel="noopener noreferrer">Voir le code</a>` : ''}
+                            </div>
+                        </div>
+
+                        <nav class="detail-nav" aria-label="Navigation entre les projets">
+                            ${prev ? `<a href="project.html?id=${prev.id}">&larr; ${prev.title}</a>` : '<span></span>'}
+                            ${next ? `<a href="project.html?id=${next.id}">${next.title} &rarr;</a>` : '<span></span>'}
+                        </nav>
+                    `;
                 })
-                .catch(err => console.error(err));
+                .catch(err => {
+                    console.error(err);
+                    container.innerHTML = notFound;
+                });
         });
     </script>
 </body>
