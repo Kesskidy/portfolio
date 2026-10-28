@@ -691,6 +691,36 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.detail-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 2.5rem;
+}
+
+.detail-gallery figure {
+    border: var(--border);
+    border-radius: 16px;
+    box-shadow: var(--shadow-small);
+    overflow: hidden;
+    background: var(--white);
+}
+
+.detail-gallery img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    background: var(--light-bg);
+    border-bottom: 2px solid var(--dark-text);
+}
+
+.detail-gallery figcaption {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
 .detail-nav {
     display: flex;
     justify-content: space-between;

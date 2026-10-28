@@ -61,14 +61,47 @@
         "challenge": "Travailler avec une formation qui n'a pas les mêmes méthodes de travail que nous, et trouver une organisation commune."
     },
     {
+        "id": 12,
+        "title": "WTF Todo",
+        "category": "web",
+        "description": "Une todo list avec une touche loufoque : une fois terminée, une tâche peut être « nukée » et disparaît dans une explosion.",
+        "image": "assets/img/todo.webp",
+        "context": "Projet scolaire, 2e année de BUT MMI",
+        "team": "En duo",
+        "tools": ["HTML", "Tailwind CSS", "JavaScript"],
+        "content": "Ce projet consistait à créer une todo list en y ajoutant une part de loufoque, pour mettre en pratique HTML et Tailwind CSS. Lorsqu'une tâche est terminée, on peut la « nuker » : elle disparaît alors dans une explosion.",
+        "challenge": "Mettre en place la suppression des tâches avec une animation d'explosion, tout en gardant une interface intuitive et agréable à utiliser.",
+        "link": "https://kesskidy.github.io/todo/",
+        "repo": "https://github.com/Kesskidy/todo"
+    },
+    {
+        "id": 13,
+        "title": "Hiromu Arakawa",
+        "category": "web",
+        "description": "Site biographique interactif consacré à la mangaka Hiromu Arakawa, avec un quiz final et une récompense à la clé.",
+        "image": "assets/img/hiromu_arakawa.webp",
+        "context": "Projet scolaire, 2e année de BUT MMI",
+        "team": "En duo",
+        "tools": ["HTML", "CSS", "JavaScript"],
+        "content": "Ce site retrace la vie et les œuvres de la mangaka Hiromu Arakawa. Il est conçu pour être à la fois interactif et informatif : à la fin du parcours, un quiz permet d'obtenir une petite récompense si l'on répond correctement à toutes les questions.",
+        "challenge": "Créer un site web interactif et informatif, tout en s'assurant de la qualité du contenu et de l'expérience utilisateur.",
+        "link": "https://nathoof30.github.io/HiromuArakawa/",
+        "repo": "https://github.com/NathOof30/HiromuArakawa"
+    },
+    {
         "id": 4,
         "title": "Affiche Chew Me × Gims",
         "category": "communication",
-        "description": "Création d'une marque de chewing-gum fictive, Chew Me, et d'une affiche publicitaire associant l'artiste Gims au produit.",
+        "description": "Projet fictif : création de la marque de chewing-gum Chew Me (logo, packaging) et d'une affiche imaginant une collaboration avec l'artiste Gims.",
         "image": "assets/img/affiche_chewing.webp",
         "context": "Projet scolaire, BUT MMI",
         "team": "Commencé en équipe de 3, terminé seul",
-        "content": "Il fallait créer une marque de chewing-gum fictive puis imaginer comment associer un artiste au produit dans une affiche. J'ai créé la marque Chew Me et choisi Gims pour son image forte. Les couleurs vives et l'accroche, qui fait référence à son titre « Caméléon », servent à attirer l'œil et à rendre le produit mémorable.",
+        "disclaimer": "Projet fictif réalisé dans un cadre scolaire : la marque Chew Me n'existe pas et la collaboration avec Gims est imaginaire.",
+        "content": "Il fallait créer une marque de chewing-gum fictive puis imaginer comment associer un artiste au produit dans une affiche. J'ai créé la marque Chew Me, avec son logo et son packaging, et choisi Gims pour son image forte. Les couleurs vives et l'accroche, qui fait référence à son titre « Caméléon », servent à attirer l'œil et à rendre le produit mémorable.",
+        "gallery": [
+            { "image": "assets/img/chewme_logo.webp", "caption": "Le logo Chew Me" },
+            { "image": "assets/img/chewme_mockup.webp", "caption": "Mockup du packaging" }
+        ],
         "challenge": "Se mettre d'accord sur une direction artistique qui plaise à tout le monde."
     },
     {
@@ -105,31 +138,5 @@
         "tools": ["CapCut"],
         "content": "Nous devions réaliser une vidéo de type booktube sur le livre de notre choix. Nous avons choisi le manga Nana d'Ai Yazawa et proposé une critique de l'œuvre sous l'angle de la société qu'elle met en scène, avec ses points forts, ses limites et notre avis personnel. J'ai travaillé sur le cadre et la qualité du son.",
         "note": "La vidéo n'est pas diffusée en ligne : je n'ai pas l'accord des personnes filmées."
-    },
-    {
-        "id": 8,
-        "title": "Site TODO",
-        "category": "web",
-        "description": "Site animé qui répertorie tous les jeux élus Game of the Year depuis le premier GOTY enregistré.",
-        "image": "assets/img/goty.webp",
-        "context": "Projet scolaire, BUT MMI",
-        "team": "En duo — j'ai réalisé toutes les animations GSAP du site",
-        "tools": ["HTML", "SCSS", "JavaScript", "GSAP"],
-        "content": "Ce projet avait pour but d'apprendre à utiliser GSAP et SCSS. Nous avons créé un site qui présente, année par année, les jeux vidéo élus Game of the Year depuis le premier GOTY enregistré. Je me suis chargé de toute la partie animation du site avec GSAP.",
-        "link": "https://kesskidy.github.io/todo/",
-        "repo": "https://github.com/Kesskidy/todo/"
-    },
-    {
-        "id": 8,
-        "title": "Site GOTY",
-        "category": "web",
-        "description": "Site animé qui répertorie tous les jeux élus Game of the Year depuis le premier GOTY enregistré.",
-        "image": "assets/img/goty.webp",
-        "context": "Projet scolaire, BUT MMI",
-        "team": "En duo — j'ai réalisé toutes les animations GSAP du site",
-        "tools": ["HTML", "SCSS", "JavaScript", "GSAP"],
-        "content": "Ce projet avait pour but d'apprendre à utiliser GSAP et SCSS. Nous avons créé un site qui présente, année par année, les jeux vidéo élus Game of the Year depuis le premier GOTY enregistré. Je me suis chargé de toute la partie animation du site avec GSAP.",
-        "link": "https://kesskidy.github.io/goty_site/",
-        "repo": "https://github.com/Kesskidy/goty_site"
     }
 ]

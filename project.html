@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=4">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -53,7 +53,7 @@
             `;
 
             // 2. Charger les données
-            fetch('data.json?v=2')
+            fetch('data.json?v=4')
                 .then(res => {
                     if (!res.ok) throw new Error(res.status);
                     return res.json();
@@ -92,8 +92,22 @@
                         </dl>
 
                         <div class="detail-content">
+                            ${project.disclaimer ? `<p class="detail-note"><i class="fas fa-circle-info" aria-hidden="true"></i> ${project.disclaimer}</p>` : ''}
+
                             <h2>À propos du projet</h2>
                             <p>${project.content}</p>
+
+                            ${project.gallery ? `
+                                <h2>En images</h2>
+                                <div class="detail-gallery">
+                                    ${project.gallery.map(g => `
+                                        <figure>
+                                            <img src="${g.image}" alt="${g.caption}" loading="lazy">
+                                            <figcaption>${g.caption}</figcaption>
+                                        </figure>
+                                    `).join('')}
+                                </div>
+                            ` : ''}
 
                             ${project.highlights ? `
                                 <h2>Ce que j'ai développé</h2>

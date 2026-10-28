@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let allProjects = [];
 
     // 1. Récupérer les données depuis le JSON
-    fetch('data.json?v=2')
+    fetch('data.json?v=4')
         .then(response => {
             if (!response.ok) throw new Error(response.status);
             return response.json();
